@@ -1,24 +1,12 @@
-* {
+.navbar-brand {
+  font-size: 50px;
 }
-
 body {
-  background-color: aqua;
-}
-
-.selector-for-some-widget {
-  box-sizing: content-box;
+  background-color: grey;
 }
 
 main {
   display: flex;
-  justify-content: center;
-}
-
-.card {
-  background-color: brown;
-}
-
-.card-header {
+  justify-content: space-around;
   margin: 25px;
-  background-color: bisque;
 }
