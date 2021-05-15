@@ -1,0 +1,24 @@
+* {
+}
+
+body {
+  background-color: aqua;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: brown;
+}
+
+.card-header {
+  margin: 25px;
+  background-color: bisque;
+}
