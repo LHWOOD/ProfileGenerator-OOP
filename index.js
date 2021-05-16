@@ -1,34 +1,88 @@
+const generateHTML = require("./src/generateHTML");
 // packages needed for the application
-
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateTemplate = require("./src/template");
-//require 4 lib - js
+//employee profiles
+const Manager = require("./lib/Manager ");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const teamArray = [];
 
-const questions = [
-  {
-    type: "input",
-    message: "Hello team manager! What is your name?",
-    name: "manager-name",
-  },
-  {
-    type: "input",
-    message: "What is your employee ID number?",
-    name: "manager-ID",
-  },
-  {
-    type: "input",
-    message: "What is your email address?",
-    name: "manager-email",
-  },
-  {
-    type: "input",
-    message: "What is your office number?",
-    name: "manager-office",
-  },
-  //option to build team or select intern engineer etc.
-];
+const addManager = () => {
+  return inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "Hello team manager! What is your name?",
+        name: "name",
+      },
+      {
+        type: "input",
+        message: "What is your employee ID number?",
+        name: "id",
+      },
+      {
+        type: "input",
+        message: "What is your email address?",
+        name: "email",
+      },
+      {
+        type: "input",
+        message: "What is your office number?",
+        name: "officeNumber",
+      },
+    ])
+    .then((managerInput) => {
+      const { name, id, email, officeNumber } = managerInput;
+      const manager = new Manager(name, id, email, officeNumber);
+    });
 
+  teamArray.push(manager);
+};
+
+const addEmployee = () => {
+  return inquirer.prompt([
+    {
+      type: "list",
+      message:
+        "Let's add people to your team. Please select your employee's role.",
+      choices: ["Engineer", "Intern"],
+      name: "role",
+    },
+    {
+      type: "input",
+      message: "What is the name of the employee?",
+      name: "name",
+    },
+    {
+      type: "input",
+      message: "What is their employee ID number?",
+      name: "id",
+    },
+    {
+      type: "input",
+      message: "What is their email address?",
+      name: "email",
+    },
+    {
+      type: "input",
+      message: "What is their GitHub username?",
+      when: (input) => input.role === "Engineer",
+      name: "github",
+    },
+    {
+      type: "input",
+      message: "What school does the inern attend?",
+      when: (input) => input.role === "Intern",
+      name: "school",
+    },
+    {
+      type: "confirm",
+      message: "Would you like to add more employees to your team?",
+      default: false,
+    },
+  ]);
+};
 //function to write the HTML
 
 //not correct -- this neds path and join
@@ -41,7 +95,7 @@ function writeToFile(fileName, data) {
 //function to initialize the app
 function init() {
   inquirer.prompt(questions).then((data) => {
-    writeToFile("index.html", generate.generateTemplate(data));
+    writeToFile("index.html", generate.generateHTML(data));
   });
 }
 
