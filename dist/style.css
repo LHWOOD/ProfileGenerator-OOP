@@ -11,6 +11,10 @@ main {
   margin: 25px;
 }
 
+.card-header {
+  font-size: 22px;
+}
+
 .card {
   box-shadow: 10px 5px 5px rgb(51, 50, 50);
 }
