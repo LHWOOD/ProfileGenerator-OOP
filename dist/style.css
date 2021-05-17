@@ -7,6 +7,10 @@ body {
 
 main {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 25px;
+}
+
+.card {
+  box-shadow: 10px 5px 5px rgb(51, 50, 50);
 }

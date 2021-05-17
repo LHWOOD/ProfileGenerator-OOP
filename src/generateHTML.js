@@ -1,8 +1,7 @@
 // funtion to generate Manager card
 const generateManager = function (manager) {
   return `<div class="card text-white bg-dark" style="width: 18rem">
-  <div class="card-header m-3">${manager.name}</div>
-  <div class="card-header m-3">Manager</div>
+  <div class="card-header m-3">Manager: ${manager.name}</div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item m-2">ID: ${manager.id}</li>
     <li class="list-group-item m-2">Email: ${manager.email}</li>
@@ -13,22 +12,22 @@ const generateManager = function (manager) {
 // funtion to generate Engineer card
 const generateEngineer = function (engineer) {
   return `<div class="card text-white bg-dark" style="width: 18rem">
-  <div class="card-header m-3">${engineer.name}</div>
+  <div class="card-header m-3">Engineer: ${engineer.name}</div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item m-2">${engineer.id}</li>
-    <li class="list-group-item m-2">${engineer.email}</li>
-    <li class="list-group-item m-2">${engineer.github}</li>
+    <li class="list-group-item m-2">ID: ${engineer.id}</li>
+    <li class="list-group-item m-2">Email: ${engineer.email}</li>
+    <li class="list-group-item m-2">GitHub: ${engineer.github}</li>
   </ul>
 </div>`;
 };
 // funtion to generate Intern card
 const generateIntern = function (intern) {
   return `<div class="card text-white bg-dark" style="width: 18rem">
-  <div class="card-header m-3">${intern.name}</div>
+  <div class="card-header m-3">Intern: ${intern.name}</div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item m-2">${intern.id}</li>
-    <li class="list-group-item m-2">${intern.email}</li>
-    <li class="list-group-item m-2">${intern.school}</li>
+    <li class="list-group-item m-2">ID: ${intern.id}</li>
+    <li class="list-group-item m-2">Email: ${intern.email}</li>
+    <li class="list-group-item m-2">School: ${intern.school}</li>
   </ul>
 </div>`;
 };
