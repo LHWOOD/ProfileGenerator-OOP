@@ -2,10 +2,11 @@
 const generateManager = function (manager) {
   return `<div class="card text-white bg-dark" style="width: 18rem">
   <div class="card-header m-3">${manager.name}</div>
+  <div class="card-header m-3">Manager</div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item m-2">${manager.id}</li>
-    <li class="list-group-item m-2">${manager.email}</li>
-    <li class="list-group-item m-2">${manager.officeNumber}</li>
+    <li class="list-group-item m-2">ID: ${manager.id}</li>
+    <li class="list-group-item m-2">Email: ${manager.email}</li>
+    <li class="list-group-item m-2">Office: ${manager.officeNumber}</li>
   </ul>
 </div>`;
 };
