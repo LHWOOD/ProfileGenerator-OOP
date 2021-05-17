@@ -57,7 +57,7 @@ generateHTML = (data) => {
 };
 
 //function that will genetate the main html template
-function generateHTML(employeeCards) {
+const generateTeamPage = function (employeeCards) {
   return `<!DOCTYPE html>
   <html lang="en">
     <head>
@@ -92,6 +92,6 @@ function generateHTML(employeeCards) {
     <script src="../index.js"></script>
   </body>
 </html>`;
-}
+};
 
 module.exports = generateHTML;

@@ -35,9 +35,8 @@ const addManager = () => {
     .then((managerInput) => {
       const { name, id, email, officeNumber } = managerInput;
       const manager = new Manager(name, id, email, officeNumber);
+      teamArray.push(manager);
     });
-
-  teamArray.push(manager);
 };
 
 const addEmployee = () => {
@@ -86,7 +85,7 @@ const addEmployee = () => {
     ])
 
     .then((employeeData) => {
-      let { name, id, email, role, gihub, school, confirmEmployee } =
+      let { name, id, email, role, github, school, confirmEmployee } =
         employeeData;
       let employee;
 
@@ -117,4 +116,14 @@ const writeFile = (data) => {
   });
 };
 
-addManager().then(addEmployee);
+addManager()
+  .then(addEmployee)
+  .then((teamArray) => {
+    return generateHTML(teamArray);
+  })
+  .then((pageHTML) => {
+    return writeFile(pageHTML);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
