@@ -8,13 +8,16 @@ body {
 main {
   display: flex;
   justify-content: space-around;
-  margin: 25px;
+  flex-wrap: wrap;
+  margin: 50px;
 }
 
 .card-header {
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 .card {
   box-shadow: 10px 5px 5px rgb(51, 50, 50);
+  margin: 50px;
 }
