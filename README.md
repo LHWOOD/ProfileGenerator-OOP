@@ -26,9 +26,9 @@ Node.js and Inquirer are needed to run this application.
 
 ## Usage
 
-Here is a screenshot of the webpage output: coming soon!
+Here is a screenshot of the webpage output: ![screenshot](images/screenshot.png)
 
-Here is a link to a video tutorial of it's functionality. coming soon!
+Here is a link to a video tutorial of it's functionality: https://drive.google.com/file/d/118HPlT3H51Rh1hF7OCRPpHmf3yu6OztR/view?usp=sharing
 
 ## Contributing
 
