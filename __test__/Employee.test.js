@@ -28,10 +28,3 @@ describe("email", () => {
     expect(employee.email).toBe(email);
   });
 });
-describe("role", () => {
-  it("should set the role via constructor argument", () => {
-    const role = "Employee";
-    const employee = new Employee("Matt", "1", "matt@hotmail.com", role);
-    expect(employee.role).toBe(role);
-  });
-});
