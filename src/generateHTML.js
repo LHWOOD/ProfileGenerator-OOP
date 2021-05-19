@@ -4,7 +4,7 @@ const generateManager = function (manager) {
   <div class="card-header mt-3 mb-3">Manager: ${manager.name}</div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item m-2">ID: ${manager.id}</li>
-    <li class="list-group-item m-2">Email: ${manager.email}</li>
+    <li class="list-group-item m-2">Email: <a href="mailto:${manager.email}"> ${manager.email}</a></li>
     <li class="list-group-item m-2">Office: ${manager.officeNumber}</li>
   </ul>
 </div>`;
@@ -15,8 +15,8 @@ const generateEngineer = function (engineer) {
   <div class="card-header mt-3 mb-3">Engineer: ${engineer.name}</div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item m-2">ID: ${engineer.id}</li>
-    <li class="list-group-item m-2">Email: ${engineer.email}</li>
-    <li class="list-group-item m-2">GitHub: ${engineer.github}</li>
+    <li class="list-group-item m-2">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+    <li class="list-group-item m-2">GitHub:<a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
   </ul>
 </div>`;
 };
@@ -26,7 +26,7 @@ const generateIntern = function (intern) {
   <div class="card-header mt-3 mb-3">Intern: ${intern.name}</div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item m-2">ID: ${intern.id}</li>
-    <li class="list-group-item m-2">Email: ${intern.email}</li>
+    <li class="list-group-item m-2">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
     <li class="list-group-item m-2">School: ${intern.school}</li>
   </ul>
 </div>`;
